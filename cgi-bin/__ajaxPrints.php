@@ -4,10 +4,10 @@
 	require_once '__function_prints.php';
 
 	// Request type (insert, update, combine some entity, etc)
-	$typeRequest = $_POST['typeRequest'];
+	$typeRequest = $_REQUEST['typeRequest'];
 
 	// Data passed for specific action
-	$data = $_POST['data'];
+	$data = $_REQUEST['data'];
 
 	// Query to perform
 	$k = "";
@@ -31,6 +31,7 @@
 		default:
 			$fileOutputPrints = "../latex/" . $typeRequest;
 			$fileOutputPrints = fopen($fileOutputPrints, 'w+') or die ("Can't create file " . $fileOutputPrints);
+            $GLOBALS['fileOutputPrints']=$fileOutputPrints;
 			call_user_func($typeRequest);
 	}
 	if($k != "") {
