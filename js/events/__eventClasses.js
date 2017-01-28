@@ -276,13 +276,13 @@ $(document).on("click", "#classMethodUpdate", function () {
         $("#classMethodList").append("<tr><td class='control'><a class='btn-floating btn-medium waves-light methodUpdate'><i class='material-icons'>create</i></a><a class='btn-floating btn-medium waves-light methodRemove'><i class='material-icons'>remove</i></a></td><td class='" + data[4] + "'>" + data[4] + "</td><td class='" + data[5] + "'>" + data[5] + "</td><td class='" + data[6] + "'>" + data[6] + "</td></tr>");
         truncate('classMethodList');
 
-        var data = [
+        var dataMin = [
             urlParam('id'),
             urlParam('package'),
             $("#updateMethod").text().split(".")[1],
             $("#updateMethod").text().split(".")[0]
         ];
-        sent('classes', 'paramDeleteAll', data);
+        sent('classes', 'paramDeleteAll', dataMin);
 
         $("#classMethodsUpdateParamsList div.chip").each(function () {
             var data = [
