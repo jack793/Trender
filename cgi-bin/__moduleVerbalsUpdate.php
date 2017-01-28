@@ -21,7 +21,7 @@
 			    selectYears: 15, // Creates a dropdown of 15 years to control year
 			    format: 'yyyy-mm-dd'
 			  });
-				$input = $('#date').pickadate()
+				$input = $('#date').pickadate();
 				var picker = $input.pickadate('picker');
 				picker.set('select', "<? echo $v[0] ?>", { format: 'yyyy-mm-dd' });
 			</script>
