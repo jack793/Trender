@@ -1,6 +1,6 @@
 @font-face{
 	font-family: 'Roboto';
-	src: url('../lib/materialize/font/Roboto-Thin.woff') format('woff');
+	src: url('../lib/materialize/font/roboto/Roboto-Thin.woff') format('woff');
 }
 .brand-logo {
 	margin-left: 0.8em;
